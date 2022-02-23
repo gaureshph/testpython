@@ -44,6 +44,9 @@ stages:
         versionSpec: 3.8 # Functions V2 supports Python 3.6 as of today
 
     - bash: |
+        python -v venv worker_venv
+        source worker_venv/bin/activate
+        sudo apt-get install libcurl4-openssl-dev libssl-dev
         pip install --target="./.python_packages/lib/site-packages" -r ./requirements.txt
       workingDirectory: $(workingDirectory)
       displayName: 'Install application dependencies'
