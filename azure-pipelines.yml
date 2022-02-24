@@ -47,6 +47,7 @@ stages:
         python -v venv worker_venv
         source worker_venv/bin/activate
         sudo apt-get install libcurl4-openssl-dev libssl-dev
+        cp /usr/lib64/libssl.so.1.0.2 worker_venv/bin/libssl.so.1.0.2
         pip install --target="./.python_packages/lib/site-packages" -r ./requirements.txt
       workingDirectory: $(workingDirectory)
       displayName: 'Install application dependencies'
