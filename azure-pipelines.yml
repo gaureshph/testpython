@@ -11,7 +11,7 @@ variables:
   azureSubscription: '400d776a-9e18-4db5-9d63-8206b382620a'
 
   # Function app name
-  functionAppName: 'testappservicefda'
+  functionAppName: 'testappservicefda1'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
